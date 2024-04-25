@@ -16,15 +16,26 @@ public class Solution2
     public int RemoveDuplicates(int[] nums)
     {
 
+        //int count = 1;
+        //int unique = nums[0];
+
+        //for (int i = 1; i < nums.Length; i++)
+        //{
+        //    if (nums[i] != unique)
+        //    {
+        //        nums[count++] = nums[i];
+        //        unique = nums[i];
+        //    }
+        //}
+
+        //return count;
         int count = 1;
-        int unique = nums[0];
 
         for (int i = 1; i < nums.Length; i++)
         {
-            if (nums[i] != unique)
+            if (nums[i] != nums[i - 1])
             {
                 nums[count++] = nums[i];
-                unique = nums[i];
             }
         }
 
